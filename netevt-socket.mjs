@@ -64,7 +64,6 @@ export class IPCEvtSocket extends EventEmitter {
 		return true;
 	}
 	_emit(event, ...evtArgs) {
-//		EventEmitter.prototype.emit.call(this, event, ...evtArgs);
 		super.emit(event, ...evtArgs);
 	}
 	_gen_raw_event(event, evt_args=[]) {
@@ -279,7 +278,6 @@ function ___EAT_EVENT_ARGS(buff, anchor) {
 		anchor += 4;
 		
 		if ( buff.length < (anchor + argLength)) {
-			console.log("TEST Failed?");
 			return false;
 		}
 		

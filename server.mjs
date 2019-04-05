@@ -43,10 +43,10 @@ function ___HANDLE_SOCKET_CONNECT(socket) {
 }
 function ___HANDLE_SOCKET_DISCONNECT(error) {
 	CLIENTS.delete(this);
-	this._parent._rel.emit( 'disconnected', this, error );
+	this._parent.emit( 'disconnected', this, error );
 }
 function ___HANDLE_SOCKET_ERROR(error) {
-	this._parent._rel.emit( 'socket-error', this, error );
+	this._parent.emit( 'socket-error', this, error );
 }
 function ___HANDLE_SERVER_CLOSE() {
 	this._rel.emit( 'close', this._rel );
