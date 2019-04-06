@@ -219,7 +219,7 @@ function ___PROCESS_MESSAGE() {
 	
 	
 	
-	if ( _MSG_SCHEDULER.length > 0 ) {
+	if ( _MSG_SCHEDULER.size > 0 ) {
 		_MSG_TIMEOUT(___PROCESS_MESSAGE);
 	}
 }

@@ -16,7 +16,7 @@ Client._deserializer = (input)=>{ return JSON.parse(input.toString('utf8')); };
 Client
 .on( 'connected', function() {
 	console.log(`Connected to event central! (${id})`);
-	Client.emit('test-event', id, 'Hi! There!!!', {a:1, b:2, c:"123", d:Date.now()});
+	this.emit('test-event', id, 'Hi! There!!!', {a:1, b:2, c:"123", d:Date.now()});
 })
 .on( 'disconnected', function() {
 	console.log(`Disconnected from event central! (${id})`);
