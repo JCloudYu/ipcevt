@@ -28,6 +28,10 @@ export class IPCEvtServer extends EventEmitter {
 		this._server.listen(...args);
 		return this;
 	}
+	close(...args){
+		this._server.close(...args);
+		return this;
+	}
 }
 
 
@@ -51,8 +55,8 @@ function ___HANDLE_SOCKET_ERROR(error) {
 function ___HANDLE_SERVER_CLOSE() {
 	this._rel.emit( 'close', this._rel );
 }
-function ___HANDLE_SERVER_ERROR() {
-	this._rel.emit('error', this._rel );
+function ___HANDLE_SERVER_ERROR(error) {
+	this._rel.emit('error', this._rel, error );
 }
 function ___HANDLE_NETEVT(sender, event, evt_args) {
 	this.emit( 'netevt', sender, event, evt_args );

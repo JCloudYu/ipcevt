@@ -1,9 +1,12 @@
 {
 	"name": "ipcevt",
-	"version": "0.9.2",
+	"version": "1.0.0",
 	"description": "A tiny socket based event system",
 	"engines" : { "node" : ">=10.0.0" },
 	"main": "index.mjs",
+	"bin": {
+		"ipc-evt-server": "./bin/ipcserver.js"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"test-server": "node --experimental-modules ./tests/server.mjs",
