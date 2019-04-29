@@ -1,6 +1,6 @@
 {
 	"name": "ipcevt",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A tiny socket based event system",
 	"engines" : { "node" : ">=10.0.0" },
 	"main": "index.mjs",

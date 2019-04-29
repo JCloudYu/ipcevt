@@ -107,6 +107,6 @@ if ( !CONF.port ) {
 	
 	this.close();
 })
-.listen( 12334, 'localhost', ()=>{
-	console.error( `${COLORS.green}Server is now listening on ${COLORS.yellow}localhost${COLORS.green}:${COLORS.yellow}1234${COLORS.green}...${COLORS.default}` );
+.listen( CONF.port, CONF.host, ()=>{
+	console.error( `${COLORS.green}Server is now listening on ${COLORS.yellow}${CONF.host}${COLORS.green}:${COLORS.yellow}${CONF.port}${COLORS.green}...${COLORS.default}` );
 });
