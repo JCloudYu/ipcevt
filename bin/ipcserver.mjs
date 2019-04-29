@@ -21,7 +21,7 @@ process.on( 'warning', (warn)=>{
 
 
 
-const DEFAULT_PORT = 12334;
+const DEFAULT_PORT = 63411;
 const DEFAULT_HOST = "127.0.0.1";
 const COLORS = {
 	default: "\u001b[39m",
